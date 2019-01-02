@@ -1,5 +1,71 @@
 {
-  "copyright": "Copyright 2017 - 2018, Terminal.ink; Discord is a trademark of Discord Inc.",
+  "categories": {
+    "fun": "Fun",
+    "games": "Games",
+    "entertainment": "Entertainment",
+    "productivity": "Productivity",
+    "education": "Education",
+    "image": "Image Manipulation",
+    "news": "News",
+    "music": "Music",
+    "moderation": "Moderation",
+    "utility": "Utility",
+    "notifications": "Notifications",
+    "other": "Other"
+  },
+  "copyright": "Copyright 2017 - 2019, Terminal.ink; Discord is a trademark of Discord Inc.",
+  "errors": {
+    "bots": {
+      "authors": "You must have at least 1 author of the bot, and all Author IDs must be numeric",
+      "category": "You must select a category for your bot",
+      "customisable": "The customisability of the prefix must be either ticked, or unticked",
+      "description": "The short description must have a length between 10 and 100",
+      "githubowner": "The GitHub owner needs to be a valid GitHub user. Leave blank if you do not have a GitHub account.",
+      "githubrepo": "The GitHub repository needs to be a valid string. Leave blank if you do not have a GitHub repository.",
+      "id": "The Bot ID needs to be filled out, and numeric",
+      "invite": "The Invite URL needs to be filled out, and as a valid HTTPS link",
+      "website": "The Website URL needs to be a valid HTTPS link",
+      "languages": "You must add a single language. Click the language you want your bot page to be in, and select the 'Add a language' button",
+      "mentionable": "The mentionabiliity of the prefix must be either ticked, or unticked",
+      "name": "The bot must have a name of length between 4 and 32.",
+      "nsfw": "The NSFW status must be either ticked, or unticked",
+      "oauth": "The OAuth ID needs to be numeric",
+      "page": "The long description must have a length between 20 and 10000",
+      "prefix": "You must have at least 1 prefix, of max length 10.",
+      "support": "The Support URL needs to be a valid HTTPS link",
+      "exists": "The bot already exists in the database, and you do not have permission to overwrite this.",
+      "notabot": "The ID provided was not a bot account.",
+      "notfound": "The ID provided was not found by Discord.",
+      "add_success": "Added bot to the bot list queue.",
+      "edit_success": "Edited bot successfully.",
+      "count": "The guild count for a bot must be between 0 and 5000000 servers",
+      "avatar": "The avatar URL must be a valid HTTPS link, and a maximum of 2000 characters",
+      "cover": "The cover URL must be a valid HTTPS link, and a maximum of 2000 characters",
+      "preview": "All preview URLs must be a valid HTTPS link, and a maximum of 2000 characters each, with a maximum of 20 links",
+      "no_suitable_lang": "This page has no English version. '{{ language }}' is being displayed instead."
+    },
+    "permissions": {
+      "login": "You are not logged in",
+      "denied": "You do not have the adequate permissions to access this"
+    },
+    "website": {
+      "noscript": "JavaScript has been disabled. Functionality may be reduced.",
+      "print": "JavaScript is not compatible with paper printouts."
+    },
+    "reviews": {
+      "rating": "Please select a rating before continuing",
+      "text": "Please enter why you gave this number of stars for this bot.",
+      "self": "You cannot review your own bot!"
+    },
+    "api": {
+      "400": "You are unauthorised to use this endpoint. Check your token is correct.",
+      "404": "This endpoint was not found, or the method used to request this page is not compatible.",
+      "500": "An internal server error occured.",
+      "test": "An error was thrown for development purposes.",
+      "no_bot": "Bot not found",
+      "idchange": "The ID of the bot cannot be changed to another ID. Please contact Terminal support for technical support"
+    }
+  },
   "footer": {
     "attribution": "Attribution",
     "licence": "GNU AGPLv3",
@@ -18,17 +84,6 @@
     "select": "Please select...",
     "submit": "Submit",
     "wait": "Please wait..."
-  },
-  "pagination": {
-    "image": {
-      "prev": "Back",
-      "next": "Next"
-    },
-    "page": {
-      "prev": "Previous",
-      "next": "Next Page"
-    },
-    "currentPage": "Page {{{ number }}}"
   },
   "intro": {
     "login": "Login",
@@ -50,6 +105,7 @@
     "fr": "French",
     "gd": "Gaelic (Scottish)",
     "hi": "Hindi",
+    "he": "Hebrew",
     "it": "Italian",
     "ja": "Japanese",
     "ko": "Korean",
@@ -87,9 +143,8 @@
       },
       "more": "View more",
       "less": "View less",
-      "adverts": "Contains features locked behind other services",
+      "adverts": "Contains adverts and features locked behind other services",
       "inAppPurchases": "Has in-app purchases",
-      "unverified": "Unverified",
       "nsfw": "NSFW",
       "offeredby": "Offered By:",
       "modified": "Last modified: {{{ date }}}",
@@ -195,7 +250,7 @@
         },
         "adverts": {
           "title": "Advertisments",
-          "small": "Tick this box if you have features that are locked behind other services"
+          "small": "Tick this box if you have advertising and/or features that are locked behind other services"
         }
       },
       "images": {
@@ -268,8 +323,24 @@
       "title": "Administration Console",
       "avatars": "Download all avatars",
       "tokens": "Reset all tokens",
-      "queue": "View queue"
+      "queue": "View queue",
+      "denied": "View denied",
+      "state": {
+        "reason": "Enter reason for changing the state of the bot",
+        "change": "Change state"
+      }
     }
+  },
+  "pagination": {
+    "image": {
+      "prev": "Back",
+      "next": "Next"
+    },
+    "page": {
+      "prev": "Previous",
+      "next": "Next Page"
+    },
+    "currentPage": "Page {{{ number }}}"
   },
   "permission": {
     "ADD_REACTIONS": "Add Reactions",
@@ -301,74 +372,13 @@
     "USE_VAD": "Use Voice Activity",
     "VIEW_AUDIT_LOG": "View Audit Log"
   },
-  "categories": {
-    "fun": "Fun",
-    "games": "Games",
-    "entertainment": "Entertainment",
-    "productivity": "Productivity",
-    "education": "Education",
-    "image": "Image Manipulation",
-    "news": "News",
-    "music": "Music",
-    "moderation": "Moderation",
-    "utility": "Utility",
-    "notifications": "Notifications",
-    "other": "Other"
-  },
-  "errors": {
-    "bots": {
-      "authors": "You must have at least 1 author of the bot, and all Author IDs must be numeric",
-      "category": "You must select a category for your bot",
-      "customisable": "The customisability of the prefix must be either ticked, or unticked",
-      "description": "The short description must have a length between 10 and 100",
-      "githubowner": "The GitHub owner needs to be a valid GitHub user. Leave blank if you do not have a GitHub account.",
-      "githubrepo": "The GitHub repository needs to be a valid string. Leave blank if you do not have a GitHub repository.",
-      "id": "The Bot ID needs to be filled out, and numeric",
-      "invite": "The Invite URL needs to be filled out, and as a valid HTTPS link",
-      "website": "The Website URL needs to be a valid HTTPS link",
-      "languages": "You must add a single language. Click the language you want your bot page to be in, and select the 'Add a language' button",
-      "mentionable": "The mentionabiliity of the prefix must be either ticked, or unticked",
-      "name": "The bot must have a name of length between 4 and 32.",
-      "nsfw": "The NSFW status must be either ticked, or unticked",
-      "oauth": "The OAuth ID needs to be numeric",
-      "page": "The long description must have a length between 20 and 10000",
-      "prefix": "You must have at least 1 prefix, of max length 10.",
-      "support": "The Support URL needs to be a valid HTTPS link",
-      "exists": "The bot already exists in the database, and you do not have permission to overwrite this.",
-      "notabot": "The ID provided was not a bot account.",
-      "notfound": "The ID provided was not found by Discord.",
-      "add_success": "Added bot to the bot list queue.",
-      "edit_success": "Edited bot successfully.",
-      "count": "The guild count for a bot must be between 0 and 5000000 servers",
-      "avatar": "The avatar URL must be a valid HTTPS link, and a maximum of 2000 characters",
-      "cover": "The cover URL must be a valid HTTPS link, and a maximum of 2000 characters",
-      "preview": "All preview URLs must be a valid HTTPS link, and a maximum of 2000 characters each, with a maximum of 20 links",
-      "no_suitable_lang": "This page has no English version. '{{ language }}' is being displayed instead."
-    },
-    "permissions": {
-      "login": "You are not logged in",
-      "denied": "You do not have the adequate permissions to access this"
-    },
-    "website": {
-      "noscript": "JavaScript has been disabled. Functionality may be reduced.",
-      "print": "JavaScript is not compatible with paper printouts."
-    },
-    "reviews": {
-      "rating": "Please select a rating before continuing",
-      "text": "Please enter why you gave this number of stars for this bot.",
-      "self": "You cannot review your own bot!"
-    },
-    "api": {
-      "500": "An internal server error occured.",
-      "404": "This endpoint was not found, or the method used to request this page is not compatible.",
-      "400": "You are unauthorised to use this endpoint. Check your token is correct.",
-      "test": "An error was thrown for development purposes.",
-      "no_bot": "Bot not found",
-      "idchange": "The ID of the bot cannot be changed to another ID. Please contact Terminal support for technical support"
-    }
-  },
   "site": {
     "name": "Discord Bot List by Terminal.ink",
     "description": "ls.terminal.ink is an application store for Discord bots. Install applications for music, news, moderation and more for your server."
+  },
+  "states": {
+    "approved": "Approved",
+    "denied": "Denied",
+    "queue": "In Queue"
   }
 }

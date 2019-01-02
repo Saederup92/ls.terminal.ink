@@ -1,5 +1,65 @@
 {
-  "copyright": "Copyright 2017 - 2018, Terminal.ink; Discord ist eine eingetragene Marke von Discord Inc.",
+  "categories": {
+    "fun": "Fun",
+    "games": "Spiele",
+    "entertainment": "Unterhaltung",
+    "productivity": "Produktivität",
+    "education": "Bildung",
+    "image": "Bildmanipulation",
+    "news": "Nachrichten",
+    "music": "Musik",
+    "moderation": "Moderation",
+    "utility": "Utility",
+    "notifications": "Meldungen",
+    "other": "Andere"
+  },
+  "copyright": "Copyright 2017 - 2019, Terminal.ink; Discord ist eine eingetragene Marke von Discord Inc.",
+  "errors": {
+    "bots": {
+      "authors": "Du musst mindestens einen Autor haben und alle Autor IDs müssen nummerisch sein",
+      "customisable": "Die änderbarkeit des Prefixes muss entweder ausgewählt oder nicht ausgewählt sein",
+      "description": "Die kurze Beschreibung muss zwischen 10 und 64 Zeichen lang sein",
+      "githubowner": "Der GitHub Besitzer muss ein gültiger Account sein. Lass es leer, wenn du keinen Account hast.",
+      "githubrepo": "Die GitHub Repository muss ein gültiger String sein. Lass es leer, wenn du keine GitHub Repository hast.",
+      "id": "Die Bot ID muss ausgefühlt und nummerisch sein",
+      "invite": "Der Invite Link muss ausgefüllt und ein gültiger HTTPS Link sein",
+      "languages": "Du musst eine einzelne Sprache auswählern befor du weitermachen kannst",
+      "mentionable": "Die erwähnbarkeit des Bots muss entweder ausgewählt oder nicht ausgewählt sein",
+      "name": "Der Botname muss eine Länge zwischen 4 und 32 Zeichen haben",
+      "nsfw": "Der NSFW-status muss entweder ausgewählt oder nicht ausgewählt sein",
+      "oauth": "Die OAuth ID muss nummerisch sein",
+      "page": "Die lange Beschreibung muss zwischen 20 und 10000 Zeichen lang sein",
+      "prefix": "Du musst mindestens einen Prefix haben, welcher maximal 10 Zeichen lang ist.",
+      "support": "Der Support-link muss ein gültiger HTTPS Link sein",
+      "exists": "Der Bot existiert bereits in der Datenbank und du hast keine Berechtigung, dies zu überschreiben.",
+      "notabot": "Die angegebene ID ist nicht von einem Bot.",
+      "notfound": "Die angegebene ID wurde von Discord nicht gefunden.",
+      "add_success": "Bot wurde zur Botlist-Warteschlange hinzugefügt.",
+      "edit_success": "Bot erfolgreich editiert.",
+      "avatar": "Die Avatar URL muss ein gültiger HTTPS Link sein und darf nicht länger als 2000 Zeichn sein",
+      "cover": "Das Cover URL muss ein gültiger HTTPS Link sein und darf nicht länger als 2000 Zeichn sein",
+      "preview": "Die Vorschau URLs müssen gültige HTTPS Links sein, dürfen jeweils nicht länger als 2000 Zeichn sein und es dürfen maximal 20 Links sein.",
+      "no_suitable_lang": "Diese Seite hat keine Deutsche version. '{{ language }}' wird stattdessen angezeigt."
+    },
+    "permissions": {
+      "login": "Du bist nicht eingeloggt",
+      "denied": "Du hast nicht die richtigen Berechtigungen um darauf zugreiffen zu können"
+    },
+    "website": {
+      "noscript": "JavaScript wurde deaktiviert. Funktionalität könnte beinträchtigt sein."
+    },
+    "reviews": {
+      "rating": "Bitte wähle eine Bewertung, befor du fortfährst",
+      "text": "Bitte gib an, warum du diesem Bot diese Anzahl an Sternen gegeben hast.",
+      "self": "Du kannst deinen eigenen Bot nicht bewerten"
+    },
+    "api": {
+      "404": "Dieser Endpunkt konnte nicht gefunden werden, oder die Methode um diese Seite anzufordern ist nicht kompatibel.",
+      "500": "Ein interner Server-error ist aufgetreten.",
+      "test": "Ein Fehler wurde aus Entwickler-Gründen ausgelöst.",
+      "no_bot": "Bot nicht gefunden."
+    }
+  },
   "footer": {
     "attribution": "Zuordnung",
     "licence": "GNU AGPLv3",
@@ -18,17 +78,6 @@
     "select": "Bitte wählen...",
     "submit": "Einreichen",
     "wait": "Bitte warten..."
-  },
-  "pagination": {
-    "image": {
-      "prev": "Zurück",
-      "next": "Vorwärts"
-    },
-    "page": {
-      "prev": "Vorherige",
-      "next": "Nächste Seite"
-    },
-    "currentPage": "Seite {{{ number }}}"
   },
   "intro": {
     "login": "Einloggen",
@@ -87,9 +136,8 @@
       },
       "more": "Zeige mehr",
       "less": "Zeige weniger",
-      "adverts": "Enthält Werbung",
+      "adverts": "Enthält Werbung und/oder Features hinter einem anderen Service",
       "inAppPurchases": "Hat in-app Käufe",
-      "unverified": "Unbestätigt",
       "nsfw": "NSFW",
       "offeredby": "Angeboten von:",
       "modified": "Zuletzt bearbeitet: {{{ date }}}",
@@ -194,7 +242,7 @@
         },
         "adverts": {
           "title": "Werbung",
-          "small": "Aktiviere dieses Kontrollkästchen, wenn dein Bot Werbung anzeigt (Auch andere Botlists)"
+          "small": "Aktiviere dieses Kontrollkästchen, wenn dein Bot Werbung und/oder Features hinter einem externen service hat"
         }
       },
       "images": {
@@ -264,6 +312,17 @@
       "all": "Alle Reviews ansehen"
     }
   },
+  "pagination": {
+    "image": {
+      "prev": "Zurück",
+      "next": "Vorwärts"
+    },
+    "page": {
+      "prev": "Vorherige",
+      "next": "Nächste Seite"
+    },
+    "currentPage": "Seite {{{ number }}}"
+  },
   "permission": {
     "ADD_REACTIONS": "Reactionen hinzufügen",
     "ADMINISTRATOR": "Administrator",
@@ -294,68 +353,11 @@
     "USE_VAD": "Sprachaktivierung verwenden",
     "VIEW_AUDIT_LOG": "Auditlogs ansehen"
   },
-  "categories": {
-    "fun": "Fun",
-    "games": "Spiele",
-    "entertainment": "Unterhaltung",
-    "productivity": "Produktivität",
-    "education": "Bildung",
-    "image": "Bildmanipulation",
-    "news": "Nachrichten",
-    "music": "Musik",
-    "moderation": "Moderation",
-    "utility": "Utility",
-    "notifications": "Meldungen",
-    "other": "Andere"
-  },
-  "errors": {
-    "bots": {
-      "authors": "Du musst mindestens einen Autor haben und alle Autor IDs müssen nummerisch sein",
-      "customisable": "Die änderbarkeit des Prefixes muss entweder ausgewählt oder nicht ausgewählt sein",
-      "description": "Die kurze Beschreibung muss zwischen 10 und 64 Zeichen lang sein",
-      "githubowner": "Der GitHub Besitzer muss ein gültiger Account sein. Lass es leer, wenn du keinen Account hast.",
-      "githubrepo": "Die GitHub Repository muss ein gültiger String sein. Lass es leer, wenn du keine GitHub Repository hast.",
-      "id": "Die Bot ID muss ausgefühlt und nummerisch sein",
-      "invite": "Der Invite Link muss ausgefüllt und ein gültiger HTTPS Link sein",
-      "languages": "Du musst eine einzelne Sprache auswählern befor du weitermachen kannst",
-      "mentionable": "Die erwähnbarkeit des Bots muss entweder ausgewählt oder nicht ausgewählt sein",
-      "name": "Der Botname muss eine Länge zwischen 4 und 32 Zeichen haben",
-      "nsfw": "Der NSFW-status muss entweder ausgewählt oder nicht ausgewählt sein",
-      "oauth": "Die OAuth ID muss nummerisch sein",
-      "page": "Die lange Beschreibung muss zwischen 20 und 10000 Zeichen lang sein",
-      "prefix": "Du musst mindestens einen Prefix haben, welcher maximal 10 Zeichen lang ist.",
-      "support": "Der Support-link muss ein gültiger HTTPS Link sein",
-      "exists": "Der Bot existiert bereits in der Datenbank und du hast keine Berechtigung, dies zu überschreiben.",
-      "notabot": "Die angegebene ID ist nicht von einem Bot.",
-      "notfound": "Die angegebene ID wurde von Discord nicht gefunden.",
-      "add_success": "Bot wurde zur Botlist-Warteschlange hinzugefügt.",
-      "edit_success": "Bot erfolgreich editiert.",
-      "avatar": "Die Avatar URL muss ein gültiger HTTPS Link sein und darf nicht länger als 2000 Zeichn sein",
-      "cover": "Das Cover URL muss ein gültiger HTTPS Link sein und darf nicht länger als 2000 Zeichn sein",
-      "preview": "Die Vorschau URLs müssen gültige HTTPS Links sein, dürfen jeweils nicht länger als 2000 Zeichn sein und es dürfen maximal 20 Links sein.",
-      "no_suitable_lang": "Diese Seite hat keine Deutsche version. '{{ language }}' wird stattdessen angezeigt."
-    },
-    "permissions": {
-      "login": "Du bist nicht eingeloggt",
-      "denied": "Du hast nicht die richtigen Berechtigungen um darauf zugreiffen zu können"
-    },
-    "website": {
-      "noscript": "JavaScript wurde deaktiviert. Funktionalität könnte beinträchtigt sein."
-    },
-    "reviews": {
-      "rating": "Bitte wähle eine Bewertung, befor du fortfährst",
-      "text": "Bitte gib an, warum du diesem Bot diese Anzahl an Sternen gegeben hast.",
-      "self": "Du kannst deinen eigenen Bot nicht bewerten"
-    },
-    "api": {
-      "500": "Ein interner Server-error ist aufgetreten.",
-      "404": "Dieser Endpunkt konnte nicht gefunden werden, oder die Methode um diese Seite anzufordern ist nicht kompatibel.",
-      "test": "Ein Fehler wurde aus Entwickler-Gründen ausgelöst.",
-      "no_bot": "Bot nicht gefunden."
-    }
-  },
   "site": {
     "name": "Discord Bots von terminal.ink",
     "description": "ls.terminal.ink ist eine Open source Webseite, wo du Bots für deinen Server finden kannst."
+  },
+  "states": {
+    "queue": "Unbestätigt"
   }
 }

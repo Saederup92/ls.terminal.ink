@@ -1,5 +1,71 @@
 {
-  "copyright": "Copyright 2017 - 2018, Terminal.ink; Discord est une marque déposée Discord Inc.\nTraduction en français par iDroid27, Bowser65 et blue.",
+  "categories": {
+    "fun": "Fun",
+    "games": "Jeux",
+    "entertainment": "Divertissement",
+    "productivity": "Productivité",
+    "education": "Éducation",
+    "image": "Manipulation d'images",
+    "news": "Informations",
+    "music": "Musique",
+    "moderation": "Modération",
+    "utility": "Utilitaire",
+    "notifications": "Notifications",
+    "other": "Autre"
+  },
+  "copyright": "Copyright 2017 - 2019, Terminal.ink; Discord est une marque déposée Discord Inc.\nTraduction en français par iDroid27, Bowser65 et blue.",
+  "errors": {
+    "bots": {
+      "authors": "Vous devez avoir au moins 1 auteur de ce bot, et tous vos IDs doivent être numériques",
+      "category": "Vous devez sélectionner une catégorie pour votre bot",
+      "customisable": "La customisabilité de votre préfixe doit être soit coché, ou décoché",
+      "description": "La description courte doit avoir une taille entre 10 et 100 caractères",
+      "githubowner": "Le propriétaire GitHub doit être un utilisateur GitHub valide. Laissez vide si vous n'avez pas de compte GitHub.",
+      "githubrepo": "le répertoire GitHub doit être une chaine de caractères valide. Laissez vide si vous n'avez pas de répertoire GitHub.",
+      "id": "L'ID du bot doit être renseigné, et numerique",
+      "invite": "L'URL d'invitation needs doit être renseignée, et avec un lien HTTPS valide",
+      "website": "L'URL du site web doit être un lien HTTPS valide",
+      "languages": "Vous devez ajouter au moins une langue. Sélectionnez le langue dans laquelle vous voulez que vote page de bot soie, et cliquez sur le bouton 'Ajouter cette langue'",
+      "mentionable": "la mentionnabilité du préfixe doit être soit coché, ou décoché",
+      "name": "Le bot doit avoir un nom d'une longueur entre 4 et 32 caractères.",
+      "nsfw": "Le status NSFW doit être soit coché, ou décoché",
+      "oauth": "L'ID OAuth doit être numerique",
+      "page": "la longue description dout avoir une longueur entre 20 et 10000 caractères.",
+      "prefix": "Vous devez avoir au moins un prefixe, d'une longueur maximale de 10 caractères.",
+      "support": "L'URL d'assistance doit être un lien HTTPS valide",
+      "exists": "Le bot existe déjà dans la base de données, et vous n'avez pas la permissions d'écraser cela.",
+      "notabot": "L'ID fourni n'était pas un ID de bot.",
+      "notfound": "L'ID fourni n'a pas été trouvé par Discord.",
+      "add_success": "Le bot a été ajouté à la liste d'attente des bots.",
+      "edit_success": "Bot édité avec succès.",
+      "count": "Le nombre de guildes pour le bot doit être entre 0 et 5000000 serveurs",
+      "avatar": "L'URL de l'avatar doit être un lien HTTPS valide, avec une longueur maximale de 2000 caractères",
+      "cover": "L'URL de la couverture doit être un lien HTTPS valide, avec une longueur maximale de 2000 caractères",
+      "preview": "Toutes les URL d'aperçu doivent être des liens HTTPS valides, avec une longueur maximale de 2000 caractères chacun, avec un maximum de 20 liens",
+      "no_suitable_lang": "Cette page n'a pas de version Française. La version en {{ language }} est affiché à la place."
+    },
+    "permissions": {
+      "login": "Vous n'êtes pas connecté",
+      "denied": "Vous n'avez pas les permissions adéquates afin d'accéder à cela"
+    },
+    "website": {
+      "noscript": "JavaScript a été désactivé. Cernaines fonctionnalitées risquent d'être réduites.",
+      "print": "JavaScript n'est pas compatible avec les impressions papier."
+    },
+    "reviews": {
+      "rating": "Veuillez sélectionner une note avant de continuer",
+      "text": "Veuillez entrer pourquoi vous avez donné cette note à ce bot.",
+      "self": "Vous ne pouvez pas critiquer votre propre bot!"
+    },
+    "api": {
+      "400": "Vous n'êtes pas autorisé à utiliser ce chemin. Vérifiez la validité du jeton.",
+      "404": "Ce chemin n'a pas été trouvé, ou la méthode utilisée pour effectuer cette requête n'est pas supportée.",
+      "500": "Une erreur interne au serveur est survenue.",
+      "test": "Une erreur a été lancée à des fins de développement.",
+      "no_bot": "Bot introuvable",
+      "idchange": "L'ID du bot ne peut être changé pour un autre ID. Veuillez contacter le support de Terminal pour une assistance technique"
+    }
+  },
   "footer": {
     "attribution": "Attribution",
     "licence": "GNU AGPLv3",
@@ -18,17 +84,6 @@
     "select": "Veuillez séléctionner...",
     "submit": "Envoyer",
     "wait": "Veuillez patienter ..."
-  },
-  "pagination": {
-    "image": {
-      "prev": "Précédent",
-      "next": "Suivant"
-    },
-    "page": {
-      "prev": "Précédente",
-      "next": "Suivante"
-    },
-    "currentPage": "Page {{{ number }}}"
   },
   "intro": {
     "login": "Se connecter via Discord",
@@ -89,7 +144,6 @@
       "less": "Voir moins",
       "adverts": "Contient de la publicité",
       "inAppPurchases": "Achats dans l'application",
-      "unverified": "Non vérifié",
       "nsfw": "NSFW",
       "offeredby": "Proposé par :",
       "modified": "Dernière modification: {{{ date }}}",
@@ -265,6 +319,17 @@
       "all": "Voir toutes les critiques"
     }
   },
+  "pagination": {
+    "image": {
+      "prev": "Précédent",
+      "next": "Suivant"
+    },
+    "page": {
+      "prev": "Précédente",
+      "next": "Suivante"
+    },
+    "currentPage": "Page {{{ number }}}"
+  },
   "permission": {
     "ADD_REACTIONS": "Ajouter des réactions",
     "ADMINISTRATOR": "Administrateur",
@@ -295,74 +360,11 @@
     "USE_VAD": "Utiliser la détection de voix",
     "VIEW_AUDIT_LOG": "Voir les logs du serveur"
   },
-  "categories": {
-    "fun": "Fun",
-    "games": "Jeux",
-    "entertainment": "Divertissement",
-    "productivity": "Productivité",
-    "education": "Éducation",
-    "image": "Manipulation d'images",
-    "news": "Informations",
-    "music": "Musique",
-    "moderation": "Modération",
-    "utility": "Utilitaire",
-    "notifications": "Notifications",
-    "other": "Autre"
-  },
-  "errors": {
-    "bots": {
-      "authors": "Vous devez avoir au moins 1 auteur de ce bot, et tous vos IDs doivent être numériques",
-      "category": "Vous devez sélectionner une catégorie pour votre bot",
-      "customisable": "La customisabilité de votre préfixe doit être soit coché, ou décoché",
-      "description": "La description courte doit avoir une taille entre 10 et 100 caractères",
-      "githubowner": "Le propriétaire GitHub doit être un utilisateur GitHub valide. Laissez vide si vous n'avez pas de compte GitHub.",
-      "githubrepo": "le répertoire GitHub doit être une chaine de caractères valide. Laissez vide si vous n'avez pas de répertoire GitHub.",
-      "id": "L'ID du bot doit être renseigné, et numerique",
-      "invite": "L'URL d'invitation needs doit être renseignée, et avec un lien HTTPS valide",
-      "website": "L'URL du site web doit être un lien HTTPS valide",
-      "languages": "Vous devez ajouter au moins une langue. Sélectionnez le langue dans laquelle vous voulez que vote page de bot soie, et cliquez sur le bouton 'Ajouter cette langue'",
-      "mentionable": "la mentionnabilité du préfixe doit être soit coché, ou décoché",
-      "name": "Le bot doit avoir un nom d'une longueur entre 4 et 32 caractères.",
-      "nsfw": "Le status NSFW doit être soit coché, ou décoché",
-      "oauth": "L'ID OAuth doit être numerique",
-      "page": "la longue description dout avoir une longueur entre 20 et 10000 caractères.",
-      "prefix": "Vous devez avoir au moins un prefixe, d'une longueur maximale de 10 caractères.",
-      "support": "L'URL d'assistance doit être un lien HTTPS valide",
-      "exists": "Le bot existe déjà dans la base de données, et vous n'avez pas la permissions d'écraser cela.",
-      "notabot": "L'ID fourni n'était pas un ID de bot.",
-      "notfound": "L'ID fourni n'a pas été trouvé par Discord.",
-      "add_success": "Le bot a été ajouté à la liste d'attente des bots.",
-      "edit_success": "Bot édité avec succès.",
-      "count": "Le nombre de guildes pour le bot doit être entre 0 et 5000000 serveurs",
-      "avatar": "L'URL de l'avatar doit être un lien HTTPS valide, avec une longueur maximale de 2000 caractères",
-      "cover": "L'URL de la couverture doit être un lien HTTPS valide, avec une longueur maximale de 2000 caractères",
-      "preview": "Toutes les URL d'aperçu doivent être des liens HTTPS valides, avec une longueur maximale de 2000 caractères chacun, avec un maximum de 20 liens",
-      "no_suitable_lang": "Cette page n'a pas de version Française. La version en {{ language }} est affiché à la place."
-    },
-    "permissions": {
-      "login": "Vous n'êtes pas connecté",
-      "denied": "Vous n'avez pas les permissions adéquates afin d'accéder à cela"
-    },
-    "website": {
-      "noscript": "JavaScript a été désactivé. Cernaines fonctionnalitées risquent d'être réduites.",
-      "print": "JavaScript n'est pas compatible avec les impressions papier."
-    },
-    "reviews": {
-      "rating": "Veuillez sélectionner une note avant de continuer",
-      "text": "Veuillez entrer pourquoi vous avez donné cette note à ce bot.",
-      "self": "Vous ne pouvez pas critiquer votre propre bot!"
-    },
-    "api": {
-      "500": "Une erreur interne au serveur est survenue.",
-      "404": "Ce chemin n'a pas été trouvé, ou la méthode utilisée pour effectuer cette requête n'est pas supportée.",
-      "400": "Vous n'êtes pas autorisé à utiliser ce chemin. Vérifiez la validité du jeton.",
-      "test": "Une erreur a été lancée à des fins de développement.",
-      "no_bot": "Bot introuvable",
-      "idchange": "L'ID du bot ne peut être changé pour un autre ID. Veuillez contacter le support de Terminal pour une assistance technique"
-    }
-  },
   "site": {
     "name": "Liste de bots Discord par ls.terminal.ink",
     "description": "ls.terminal.ink est une boutique d'application pour des bots Discord. Installez des applications pour de la musique, pour des informations, pour modérer et plus pour votre serveur."
+  },
+  "states": {
+    "queue": "Non vérifié"
   }
 }

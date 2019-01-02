@@ -5,17 +5,24 @@ module.exports = class Middleware {
     if (req.user) {
       next();
     } else {
-      res.status(400).render('error', {
+      res.status(401).render('error', {
         message: res.__('errors.permissions.login'),
       });
     }
   }
 
+  /**
+   * A router which checks if the user is logged in or not.
+   * If the user is not logged in, respond with JSON.
+   * @param {*} req Request
+   * @param {*} res Response
+   * @param {*} next Next
+   */
   static isLoggedInButJSON(req, res, next) {
     if (req.user) {
       next();
     } else {
-      res.status(400).json({
+      res.status(401).json({
         err: true,
         message: res.__('errors.permissions.login')
       });
@@ -23,10 +30,10 @@ module.exports = class Middleware {
   }
 
   static isAdmin(req, res, next) {
-    if (req.user.admin) {
+    if (req.user && req.user.admin) {
       next();
     } else {
-      res.status(400).render('error', {
+      res.status(401).render('error', {
         message: res.__('errors.permissions.denied'),
       });
     }
@@ -36,7 +43,7 @@ module.exports = class Middleware {
     if (req.user.admin) {
       next();
     } else if (!req.user) {
-      res.status(400).render('error', {
+      res.status(401).render('error', {
         message: res.__('errors.permissions.login'),
       });
     } else {
@@ -44,13 +51,11 @@ module.exports = class Middleware {
         .get(req.params.id)
         .then((bot) => {
           if (!bot) {
-            res.status(404).render('error', {
-              message: res.__('pages.error.notfound')
-            });
+            next('router');
           } else if (bot.authors.includes(req.user.id)) {
             next();
           } else {
-            res.status(400).render('error', {
+            res.status(401).render('error', {
               message: res.__('errors.permissions.denied'),
             });
           }
@@ -63,11 +68,17 @@ module.exports = class Middleware {
       .get(req.params.id)
       .then((bot) => {
         if (!bot) {
-          res.status(404).render('error', {
-            message: res.__('pages.error.notfound')
-          });
-        } else {
+          next('router');
+        } else if (bot.state === 'approved') {
           next();
+        } else if (!req.user) {
+          next('router');
+        } else if (bot.authors.includes(req.user.id)) {
+          next();
+        } else if (req.user.admin) {
+          next();
+        } else {
+          next('router');
         }
       });
   }
@@ -95,7 +106,7 @@ module.exports = class Middleware {
     if (req.user.admin) {
       next();
     } else if (!req.user) {
-      res.status(400).render('error', {
+      res.status(401).render('error', {
         message: res.__('errors.permissions.login'),
       });
     } else {
@@ -103,13 +114,11 @@ module.exports = class Middleware {
         .get(req.params.review)
         .then((review) => {
           if (!review) {
-            res.status(404).render('error', {
-              message: res.__('pages.error.notfound')
-            });
+            next('router');
           } else if (review.author === req.user.id) {
             next();
           } else {
-            res.status(400).render('error', {
+            res.status(401).render('error', {
               message: res.__('errors.permissions.denied'),
             });
           }
