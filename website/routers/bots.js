@@ -22,6 +22,7 @@ const languages = require('../data/languages.json');
 const categories = require('../data/categories.json');
 const dateformat = require('../data/dateformat.json');
 const selectableStates = require('../data/states.json');
+const { fixRoles } = require('../static/bot');
 
 const router = express.Router();
 const reader = multer();
@@ -120,6 +121,7 @@ router
                 })
                 .then(() => {
                   discordWebhooks(`${req.user.username}#${req.user.discriminator} (${req.user.id}) ${type} <@${value.id}> - ${config.webserver.location}${res.locals.languagePrefix}/bots/${value.id}`);
+                  fixRoles();
                   res.json({
                     ok: true,
                     message: res.__(message),
@@ -142,8 +144,7 @@ router
           .get(value.id)
           .then((existingBot) => {
             if (existingBot) {
-              if (existingBot.authors.includes(req.user.id) || req.user.admin) {
-                // Copy over some stuff while overwriting
+              const useExistingData = () => {
                 value.state = existingBot.state;
                 value.legacy = existingBot.legacy;
                 value.random = existingBot.random;
@@ -151,6 +152,18 @@ router
                 value.created = existingBot.created || (new Date()).getTime();
                 value.edited = (new Date()).getTime();
                 value.hide = existingBot.hide;
+              };
+              if (req.user.admin) {
+                useExistingData();
+                insert('edited', 'errors.bots.edit_success');
+              } else if (existingBot.state === 'banned') {
+                res.json({
+                  ok: false,
+                  message: res.__('errors.permissions.banned')
+                });
+              } else if (existingBot.authors.includes(req.user.id)) {
+                // Copy over some stuff while overwriting
+                useExistingData();
                 insert('edited', 'errors.bots.edit_success');
               } else {
                 res.json({
@@ -253,6 +266,7 @@ router
       .then(() => {
         res.redirect(`${res.locals.languagePrefix}/`);
         discordWebhooks(`<@${req.user.id}> deleted <@${req.params.id}>`);
+        fixRoles();
       })
       .catch((err) => {
         next(err);
@@ -315,6 +329,7 @@ router
             discordWebhooks(`<@${req.user.id}> moved <@${req.params.id}> to \`${req.body.state}\`\n${newVal.authors.map(owner => `<@${owner}>`).join(', ')}\n\n${req.body.reason}`);
           }
           res.redirect(`${res.locals.languagePrefix}/bots/${req.params.id}`);
+          fixRoles();
         })
         .catch((err) => {
           next(err);
@@ -393,8 +408,8 @@ router
             res.render('bot', {
               item: bot,
               contents,
-              canEdit: req.user ? bot.authors.some(owner => owner.id === req.user.id) || req.user.admin : false,
-              isOwner: req.user ? bot.authors.some(owner => owner.id === req.user.id) : false,
+              canEdit: req.user && bot.state !== 'banned' ? bot.authors.some(owner => owner.id === req.user.id) || req.user.admin : false,
+              isOwner: req.user && bot.state !== 'banned' ? bot.authors.some(owner => owner.id === req.user.id) : false,
               cover: bot.cachedImages ? bot.cachedImages.cover : null,
               edited: (new Date(item.edited)).toLocaleDateString(res.getLocale(), dateformat),
               created: (new Date(item.created)).toLocaleDateString(res.getLocale(), dateformat),

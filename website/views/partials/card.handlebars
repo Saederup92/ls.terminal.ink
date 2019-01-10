@@ -1,27 +1,19 @@
-<section class="card">
-  <div class="avatar">
-    <img src="{{item.cachedImages.avatar}}" />
-  </div>
-  <div class="card-content">
-    <a href="{{languagePrefix}}/bots/{{item.id}}">
+<a href="{{languagePrefix}}/bots/{{item.id}}">
+  <section class="card">
+    <div class="avatar">
+      <img src="{{item.cachedImages.avatar}}" />
+    </div>
+    <div class="card-content">
       <h4 class="title">
         {{item.contents.name}}
         {{#if item.nsfw}}
           <span class="ls-list-nsfw">{{i18n __ "pages.bots.nsfw"}}</span>
         {{/if}}
-        {{#if (isEqual item.state 'queue')}}
-          <span class="ls-list-nsfw">{{i18n __ "states.queue"}}</span>
-        {{/if}}
-        {{#if (isEqual item.state 'denied')}}
-          <span class="ls-list-nsfw">{{i18n __ "states.denied"}}</span>
-        {{/if}}
+        {{#unless (isEqual item.state 'approved')}}
+          <span class="ls-list-nsfw">{{i18n __ (concat "states." item.state)}}</span>
+        {{/unless}}
       </h4>
-    </a>
-    <span class="description">{{item.contents.description}}</span>
-  </div>
-  <div class="footer">
-    {{#if item.invite}}
-      <a href="{{item.invite}}">{{i18n __ "pages.list.invite"}}</a>
-    {{/if}}
-  </div>
-</section>
+      <span class="description">{{item.contents.description}}</span>
+    </div>
+  </section>
+</a>

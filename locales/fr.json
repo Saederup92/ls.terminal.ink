@@ -46,7 +46,8 @@
     },
     "permissions": {
       "login": "Vous n'êtes pas connecté",
-      "denied": "Vous n'avez pas les permissions adéquates afin d'accéder à cela"
+      "denied": "Vous n'avez pas les permissions adéquates afin d'accéder à cela",
+      "banned": "Vous avez été interdit d'accéder à cette ressource"
     },
     "website": {
       "noscript": "JavaScript a été désactivé. Cernaines fonctionnalitées risquent d'être réduites.",
@@ -86,10 +87,7 @@
     "wait": "Veuillez patienter ..."
   },
   "intro": {
-    "login": "Se connecter via Discord",
-    "logout": "Déconnexion",
     "search": "Que recherchez vous?",
-    "admin": "Admin",
     "docs": "Documentation"
   },
   "locales": {
@@ -105,6 +103,7 @@
     "fr": "Français",
     "gd": "Gaélique (Écossais)",
     "hi": "Hindi",
+    "he": "Hébreu",
     "it": "Italien",
     "ja": "Japonais",
     "ko": "Coréen",
@@ -121,7 +120,6 @@
   },
   "pages": {
     "bots": {
-      "add": "Ajouter votre propre bot",
       "backgroundAlt": "Logo pour ls.terminal.ink",
       "description": "Une boutique d'applications pour des bots Discord",
       "invite": "Inviter ce bot",
@@ -149,19 +147,20 @@
       "modified": "Dernière modification: {{{ date }}}",
       "created": "Publication: {{{ date }}}",
       "category": "Catégorie: {{{ category }}}",
-      "initiateCategoryFilter": "Find bots for...",
-      "ownerFilter": "Bots by {{{ name }}}",
+      "initiateCategoryFilter": "Chercher des bots pour ...",
+      "ownerFilter": "Bots triés par {{{ name }}}",
+      "search": "Rechercher",
       "count": {
         "one": "Installé dans un seul serveur",
-        "other": "Installé dans un %s serveurs"
+        "other": "Installé dans %s serveurs"
       },
-      "rated": "Noté {{ rating }}/5"
+      "rated": "Noté {{ rating }}/5.0"
     },
     "configuration": {
       "token": {
         "title": "Jeton",
-        "description": "Click 'Docs' in the footer for help",
-        "docs": "View Documentation"
+        "description": "Cliquez sur 'Docs' en bas de page pour voir l'aide",
+        "docs": "Voir la documentation"
       },
       "renew": "Renouveler le jeton",
       "hide": {
@@ -297,6 +296,12 @@
       "choose": "Sélectionnez une langue.",
       "pleasehelp": "Êtes-vous un bon traducteur ? Cliquez ici."
     },
+    "langdev": {
+      "title": "Voir les clés des langages",
+      "compare": "Comparer les langages sélectionnés",
+      "key": "Clé JSON",
+      "notfound": "Clé introuvable !"
+    },
     "notfound": {
       "gohome": "Aller à l'accueil",
       "message": "Page introuvable"
@@ -317,6 +322,16 @@
       },
       "delete": "Supprimer la critique",
       "all": "Voir toutes les critiques"
+    },
+    "admin": {
+      "title": "Console d'Administration",
+      "queue": "Voir la queue",
+      "denied": "Voir les refusés",
+      "banned": "Voir les bannis",
+      "state": {
+        "reason": "Entrez la raison pour changer le statut du bot",
+        "change": "Changer le statut"
+      }
     }
   },
   "pagination": {
@@ -365,6 +380,15 @@
     "description": "ls.terminal.ink est une boutique d'application pour des bots Discord. Installez des applications pour de la musique, pour des informations, pour modérer et plus pour votre serveur."
   },
   "states": {
-    "queue": "Non vérifié"
+    "approved": "Approuvé",
+    "denied": "Refusé",
+    "queue": "En attente",
+    "banned": "Banni"
+  },
+  "navbar": {
+    "add": "Ajouter votre propre bot",
+    "login": "Se connecter",
+    "logout": "Déconnexion",
+    "admin": "Admin"
   }
 }
