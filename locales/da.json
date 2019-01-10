@@ -105,7 +105,6 @@
     "fr": "Fransk",
     "gd": "Gælisk (Skotsk)",
     "hi": "Hindi",
-	"he": "Hebraisk",
     "it": "Italiensk",
     "ja": "Japansk",
     "ko": "Koreansk",
@@ -143,7 +142,7 @@
       },
       "more": "Vis mere",
       "less": "Vis mindre",
-      "adverts": "Indeholder reklamer og funktioner der er låst bag andre tjenester",
+      "adverts": "Indeholder funktioner der er låst bag andre tjenester",
       "inAppPurchases": "Has in-app purchases",
       "nsfw": "NSFW",
       "offeredby": "Indsendt af:",
@@ -256,7 +255,7 @@
       "images": {
         "title": "Udseende",
         "avatar": {
-          "title": "Link til avatar",
+          "title": "Avatar URL",
           "placeholder": "Et HTTPS-link til et billede der bruges som avatar"
         },
         "cover": {
@@ -324,10 +323,6 @@
       "avatars": "Download alle avatarer",
       "tokens": "Nulstil alle tokens",
       "queue": "Vis kø"
-	  "state": {
-        "reason": "Indtast en begrundelse for ændring af bottens status",
-        "change": "Ændre status"
-      }
     }
   },
   "pagination": {
@@ -376,8 +371,6 @@
     "description": "ls.terminal.ink is an application store for Discord bots. Install applications for music, news, moderation and more for your server."
   },
   "states": {
-	"approved": "Godkendt",
-    "denied": "Afvist",
-    "queue": "I kø"
+    "queue": "Ikke verificeret"
   }
 }
